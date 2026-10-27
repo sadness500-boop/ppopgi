@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#2747F5"><meta name="description" content="모임용 뽑기·미니게임 21종 — 오늘의 뽑기판"><link rel="icon" href="icons/icon-64.png"><meta property="og:type" content="website"><meta property="og:site_name" content="오늘의 뽑기판"><meta property="og:title" content="오늘의 뽑기판 — 친구가 초대했어요!"><meta property="og:description" content="사다리·룰렛·빙고·폭탄 돌리기 등 모임용 게임 21종. 눌러서 내 휴대폰에 앱을 받으세요."><meta property="og:url" content="https://sadness500-boop.github.io/ppopgi/"><meta property="og:image" content="https://sadness500-boop.github.io/ppopgi/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><title>오늘의 뽑기판</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="뽑기판"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}body{font:14px system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>오늘의 뽑기판</title>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#2747F5"><meta name="description" content="모임용 뽑기·미니게임 21종 — 오늘의 뽑기판"><link rel="icon" href="icons/icon-64.png"><meta property="og:type" content="website"><meta property="og:site_name" content="오늘의 뽑기판"><meta property="og:title" content="오늘의 뽑기판 — 친구가 추천했어요!"><meta property="og:description" content="사다리·룰렛·빙고·폭탄 돌리기 등 모임용 게임 21종. 설치 없이 바로 열려요. 북마크해 두고 쓰세요."><meta property="og:url" content="https://sadness500-boop.github.io/ppopgi/"><meta property="og:image" content="https://sadness500-boop.github.io/ppopgi/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><title>오늘의 뽑기판</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="뽑기판"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html,body{margin:0}body{font:14px system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>오늘의 뽑기판</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Black+Han+Sans&family=IBM+Plex+Mono:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
@@ -32,6 +32,14 @@ button,input,select{font:inherit;color:inherit}
 /* header */
 .top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 20px;margin-bottom:16px}
 .brand{font-family:var(--display);font-size:clamp(28px,5vw,40px);letter-spacing:.01em;line-height:1}
+.brand .ver{display:inline-block;vertical-align:top;margin-left:8px;margin-top:4px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.02em;
+  color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent);border-radius:999px;padding:2px 8px;line-height:1.3}
+.bm-guide{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.bm-guide>div{background:var(--surface-2);border-radius:10px;padding:9px 11px;font-size:12.5px;color:var(--muted)}
+.bm-guide>div>b{color:var(--ink);font-size:13px}
+.bm-guide ol{margin:4px 0 0;padding-left:17px;display:grid;gap:2px}
+.bm-guide ol b{color:var(--ink)}
+@media (max-width:420px){.bm-guide{grid-template-columns:1fr}}
 .brand b{color:var(--hot);font-weight:400}
 .tag{color:var(--muted);margin:0;max-width:52ch}
 
@@ -307,6 +315,7 @@ nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
 .mode-tabs button{border:0;background:none;padding:6px 2px 9px;font-weight:700;font-size:15px;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
 .mode-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--hot)}
 .friend-qr{box-shadow:inset 0 0 0 3px var(--hot)}
+#qr-box{box-shadow:inset 0 0 0 3px #1B2C9E}
 .fr-how{display:grid;gap:2px;font-size:13px;color:var(--muted);background:var(--surface-2);border-radius:10px;padding:10px 12px;margin-bottom:10px}
 .fr-how b{color:var(--ink)}
 .fr-preview{white-space:pre-line;font-size:13px;line-height:1.5;border:1px dashed var(--line-strong);border-radius:10px;padding:10px 12px;margin-bottom:12px;max-height:150px;overflow:auto;word-break:break-all}
@@ -490,18 +499,18 @@ nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
   <div class="topbar">
     <span class="topbar-tag">모임용 뽑기 · 미니게임 21종</span>
     <div class="top-actions">
+    <button class="invite-btn" id="invite-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="18.5" r="1" fill="currentColor"/></svg><span>다운로드 QR</span></button>
+    <button class="invite-btn friend" id="friend-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5" fill="currentColor"/><path d="M2.5 20c0-3.8 2.9-6.3 6.5-6.3s6.5 2.5 6.5 6.3z" fill="currentColor"/><path d="M19 7v6M16 10h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>친구 추천</span></button>
     <div class="theme-sw" role="radiogroup" aria-label="화면 모드">
       <button type="button" role="radio" data-t="light" title="주간 모드"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg><span>주간</span></button>
       <button type="button" role="radio" data-t="dark" title="야간 모드"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/><circle cx="17" cy="5" r="1.2" fill="currentColor"/><circle cx="20.5" cy="9" r=".9" fill="currentColor"/></svg><span>야간</span></button>
       <button type="button" role="radio" data-t="auto" title="기기 설정 따라가기"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg><span>자동</span></button>
     </div>
-    <button class="invite-btn" id="invite-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="18.5" r="1" fill="currentColor"/></svg><span>앱 다운로드 QR</span></button>
-    <button class="invite-btn friend" id="friend-open" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5" fill="currentColor"/><path d="M2.5 20c0-3.8 2.9-6.3 6.5-6.3s6.5 2.5 6.5 6.3z" fill="currentColor"/><path d="M19 7v6M16 10h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>친구초대</span></button>
     </div>
   </div>
   <header class="hero">
     <div>
-      <div class="brand">오늘의 <b>뽑기판</b></div>
+      <div class="brand">오늘의 <b>뽑기판</b><span class="ver" id="app-ver" title="프로그램 버전">v1.5.0</span></div>
       <p class="tag">설치 없이 바로. 회식 메뉴, 발표 순서, 커피 당번, 경품 추첨까지 참가자 명단 한 번으로 21가지 게임에 씁니다. 뽀기, 다이, 펭 대리, 냥 팀장이 진행을 맡아요.</p>
       <div class="hero-actions"><button class="btn ghost small" id="snd" type="button">효과음 켜짐</button>
         <label class="vol"><span>음량</span><input type="range" id="vol" min="0" max="1" step="0.05" aria-label="효과음 음량"></label>
@@ -554,51 +563,35 @@ nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
   <div class="invite-card" role="dialog" aria-modal="true" aria-labelledby="invite-title">
     <button class="invite-x" id="invite-close" type="button" aria-label="닫기">×</button>
     <div class="invite-head"><div class="invite-fig" id="invite-fig"></div>
-      <div><div class="eyebrow" id="inv-eyebrow">앱 다운로드</div><h2 id="invite-title">휴대폰 카메라로 찍어서 앱을 받으세요</h2></div></div>
+      <div><div class="eyebrow" id="inv-eyebrow">다운로드 QR</div><h2 id="invite-title">카메라로 찍어서 사이트를 북마크하세요</h2></div></div>
     <div class="mode-tabs" role="tablist" aria-label="보기 선택">
-      <button type="button" role="tab" data-mode="dl" id="mode-dl">앱 다운로드</button>
-      <button type="button" role="tab" data-mode="friend" id="mode-friend">친구초대</button>
+      <button type="button" role="tab" data-mode="dl" id="mode-dl">다운로드 QR</button>
+      <button type="button" role="tab" data-mode="friend" id="mode-friend">친구 추천</button>
     </div>
     <div id="pane-dl">
-    <div class="os-tabs" role="tablist" aria-label="휴대폰 종류">
-      <button type="button" role="tab" data-os="android" id="tab-android"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10h14v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="currentColor"/><path d="M5.5 9a6.5 5.5 0 0 1 13 0z" fill="currentColor"/><path d="M8 4.5 6.8 2.5M16 4.5l1.2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="6.8" r=".9" fill="#fff"/><circle cx="14.5" cy="6.8" r=".9" fill="#fff"/></svg><span>안드로이드</span></button>
-      <button type="button" role="tab" data-os="ios" id="tab-ios"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8s-1.8-.8-3-.8C6.9 7.3 5 8.6 5 11.6c0 1.9.7 3.9 1.6 5.2.8 1.1 1.5 2.1 2.6 2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7 1.8-1.1 2.5-2.1c.8-1.2 1.1-2.3 1.1-2.4 0 0-2-.8-1.8-3.7zM14.3 5.6c.6-.7 1-1.7.9-2.6-.8 0-1.8.6-2.4 1.3-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.4-1.2z" fill="currentColor"/></svg><span>아이폰</span></button>
-    </div>
-    <div class="qr-frame" id="qr-box"><canvas id="qr-cv" width="300" height="300" aria-label="앱 다운로드 QR코드"></canvas><span class="qr-badge" id="qr-badge">안드로이드</span></div>
-    <div class="qr-empty" id="qr-empty" hidden></div>
-    <p class="qr-url" id="qr-url"></p>
-    <ol class="os-steps" id="os-steps"></ol>
-    <div class="invite-actions"><button class="btn" id="inv-copy-link" type="button">다운로드 링크 복사</button><button class="btn ghost" type="button" id="to-friend">이 앱 친구에게 보내기</button></div>
-    <details class="inv-edit" id="inv-edit"><summary>다운로드 주소 설정</summary>
-      <form id="inv-form" class="dl-form">
-        <label class="field"><span>안드로이드 앱(apk) 다운로드 주소</span><input id="inv-and" type="text" inputmode="url" placeholder="https://drive.google.com/file/d/…"></label>
-        <label class="field"><span>아이폰 앱 주소 (App Store · TestFlight · 웹앱)</span><input id="inv-ios" type="text" inputmode="url" placeholder="https://"></label>
-        <p class="note" style="margin:0">구글 드라이브 공유 링크를 넣으면 바로 내려받는 주소로 자동 변환해요. 드라이브에서 공유를 「링크가 있는 모든 사용자」로 바꿔 두세요.</p>
-        <div class="row" style="margin:0"><button class="btn small" type="submit">저장</button><button class="btn ghost small" type="button" id="inv-reset">기본값</button></div>
-      </form>
-    </details>
+      <div class="qr-frame" id="qr-box"><canvas id="qr-cv" width="300" height="300" aria-label="사이트 주소 QR코드"></canvas><span class="qr-badge" id="qr-badge">뽑기판</span></div>
+      <p class="qr-url" id="qr-url"></p>
+      <div class="bm-guide">
+        <div><b>휴대폰</b><ol><li>카메라로 QR을 찍어 사이트를 엽니다</li><li>브라우저 메뉴(⋮ 또는 공유 버튼)에서 <b>북마크</b> 또는 <b>홈 화면에 추가</b></li></ol></div>
+        <div><b>PC</b><ol><li>사이트 주소를 복사해 브라우저에서 엽니다</li><li><b>Ctrl + D</b>를 누르면 북마크(즐겨찾기)에 저장돼요</li></ol></div>
+      </div>
+      <div class="invite-actions"><button class="btn" id="inv-copy-link" type="button">사이트 주소 복사</button><button class="btn ghost" type="button" id="to-friend">친구에게 추천하기</button></div>
+      <details class="inv-edit" id="inv-edit"><summary>사이트 주소 바꾸기</summary>
+        <form id="inv-form" class="dl-form">
+          <label class="field"><span>사이트 주소</span><input id="inv-site" type="text" inputmode="url" placeholder="https://"></label>
+          <div class="row" style="margin:0"><button class="btn small" type="submit">저장</button><button class="btn ghost small" type="button" id="inv-reset">기본값</button></div>
+        </form>
+      </details>
     </div>
     <div id="pane-friend" hidden>
-      <label class="field" style="margin-bottom:10px"><span>초대하는 사람 (내 이름)</span><input id="fr-name" type="text" maxlength="12" placeholder="예: 민영"></label>
-      <div class="qr-frame friend-qr"><canvas id="fr-cv" width="300" height="300" aria-label="친구초대 QR코드"></canvas><span class="qr-badge" style="background:#EE5A28">친구초대</span></div>
+      <label class="field" style="margin-bottom:10px"><span>추천하는 사람 (내 이름)</span><input id="fr-name" type="text" maxlength="12" placeholder="예: 민영"></label>
+      <div class="qr-frame friend-qr"><canvas id="fr-cv" width="300" height="300" aria-label="친구 추천 QR코드"></canvas><span class="qr-badge" style="background:#EE5A28">친구 추천</span></div>
       <p class="qr-url" id="fr-url"></p>
-      <div class="fr-how"><b>친구가 이 QR을 찍으면</b><span>초대 화면이 열리고, 친구 휴대폰에 맞는 앱 받기 버튼(안드로이드 apk · 아이폰 설치 방법)이 자동으로 나와요.</span></div>
-      <div class="fr-preview" id="fr-preview" aria-label="초대 메시지 미리보기"></div>
-      <div class="invite-actions"><button class="btn" id="fr-copy" type="button">초대 메시지 복사</button><button class="btn ghost" id="fr-copy-link" type="button">초대 링크만 복사</button></div>
+      <div class="fr-how"><b>친구가 이 QR을 찍거나 주소를 누르면</b><span>오늘의 뽑기판 사이트가 바로 열려요. 친구도 북마크해 두면 언제든 다시 쓸 수 있어요.</span></div>
+      <div class="fr-preview" id="fr-preview" aria-label="추천 메시지 미리보기"></div>
+      <div class="invite-actions"><button class="btn" id="fr-copy" type="button">추천 메시지 복사</button><button class="btn ghost" id="fr-copy-link" type="button">사이트 주소만 복사</button></div>
       <p class="note" id="fr-count" style="margin:10px 0 0;text-align:center"></p>
     </div>
-  </div>
-</div>
-<div class="invite-back" id="welcome" hidden>
-  <div class="invite-card welcome-card" role="dialog" aria-modal="true" aria-labelledby="wel-title">
-    <button class="invite-x" id="wel-close" type="button" aria-label="닫기">×</button>
-    <div class="wel-figs" id="wel-figs"></div>
-    <div class="eyebrow" style="text-align:center">친구초대</div>
-    <h2 id="wel-title" class="wel-title">오늘의 뽑기판에 초대받았어요!</h2>
-    <p class="wel-sub">사다리·룰렛·빙고·폭탄 돌리기 등 21가지 게임을 친구들과 함께 즐겨요.</p>
-    <div class="wel-btns" id="wel-btns"></div>
-    <ol class="os-steps" id="wel-steps"></ol>
-    <button class="btn ghost" id="wel-web" type="button" style="width:100%">설치 없이 지금 웹에서 하기</button>
   </div>
 </div>
 <canvas id="confetti" aria-hidden="true"></canvas>
@@ -1489,83 +1482,47 @@ renderRoster();buildNav();
     new MutationObserver(()=>{if(busy)return;host=root.getAttribute('data-theme');if(mode!=='auto'&&host!==mode){set(mode)}else dispatchEvent(new Event('resize'))}).observe(root,{attributes:true,attributeFilter:['data-theme']});
     apply();
   })();
-  /* ---------- 앱 다운로드 QR (안드로이드 · 아이폰) ---------- */
-  (function appQR(){
-    const KEY='ppopgi-dl-links';
-    /* 기본 다운로드 주소: 배포 주소가 정해지면 여기에 넣어 두면 모든 사용자에게 같은 QR이 보입니다 */
-    const WEB='https://sadness500-boop.github.io/ppopgi/';  /* 초대·아이폰 설치용 공개 주소 (GitHub Pages) */
-    const DEFAULTS={android:'https://github.com/sadness500-boop/ppopgi/raw/main/ppopgi.apk',ios:WEB};
-    const STEPS={
-      android:['QR을 찍어 <b>ppopgi.apk</b>를 내려받아요','다운로드한 파일을 눌러 <b>설치</b>','「출처를 알 수 없는 앱」 안내가 나오면 <b>이 출처 허용</b>을 켜고 다시 설치'],
-      ios:['QR을 찍어 <b>사파리</b>로 열어요','아래쪽 <b>공유 버튼</b> → <b>홈 화면에 추가</b>','홈 화면의 <b>뽑기판</b> 아이콘으로 앱처럼 실행']};
-    const back=$('#invite'),cv=$('#qr-cv'),urlEl=$('#qr-url'),box=$('#qr-box'),empty=$('#qr-empty');let os='android',lastFocus=null;
-    function links(){let v={};try{v=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}return{android:v.android||DEFAULTS.android,ios:v.ios||DEFAULTS.ios}}
-    function norm(u){u=(u||'').trim();if(!u)return'';if(!/^[a-z]+:\/\//i.test(u))u='https://'+u;
-      const m=u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=download&)?id=)([\w-]{10,})/);
-      return m?'https://drive.google.com/uc?export=download&id='+m[1]:u}
+  /* ---------- 다운로드 QR · 친구 추천 (둘 다 사이트 주소) ---------- */
+  (function siteQR(){
+    const SITE_DEFAULT='https://sadness500-boop.github.io/ppopgi/';  /* 북마크용 공식 사이트 주소 */
+    const KEY='ppopgi-site-url',FKEY='ppopgi-inviter',CKEY='ppopgi-invite-count';
+    const back=$('#invite');let lastFocus=null,mode='dl';
+    const site=()=>{try{return localStorage.getItem(KEY)||SITE_DEFAULT}catch(e){return SITE_DEFAULT}};
+    const getName=()=>{try{return localStorage.getItem(FKEY)||''}catch(e){return''}};
+    function norm(u){u=(u||'').trim();if(!u)return'';if(!/^[a-z]+:\/\//i.test(u))u='https://'+u;return u}
     function rr(g,x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath()}
-    let canvasRef=null;
-    function draw(u,eye){const cv=canvasRef||document.getElementById('qr-cv');let a=u;try{a=encodeURI(decodeURI(u))}catch(e){a=encodeURI(u)}const q=qrcode(0,'H');q.addData(a);q.make();
+    function draw(cv,u,eye){let a=u;try{a=encodeURI(decodeURI(u))}catch(e){a=encodeURI(u)}const q=qrcode(0,'H');q.addData(a);q.make();
       const n=q.getModuleCount(),qz=3,S=cv.width,cell=S/(n+qz*2),g=cv.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,S,S);g.fillStyle='#141A2E';
       for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))g.fillRect(Math.floor((c+qz)*cell),Math.floor((r+qz)*cell),Math.ceil(cell),Math.ceil(cell));
       [[0,0],[0,n-7],[n-7,0]].forEach(([r,c])=>{const x=(c+qz)*cell,y=(r+qz)*cell,w=7*cell;g.fillStyle='#fff';g.fillRect(x-1,y-1,w+2,w+2);
         g.fillStyle=eye;rr(g,x,y,w,w,w*.28);g.fill();g.fillStyle='#fff';rr(g,x+cell,y+cell,w-2*cell,w-2*cell,w*.2);g.fill();g.fillStyle='#141A2E';rr(g,x+2*cell,y+2*cell,3*cell,3*cell,cell*.9);g.fill()})}
-    function render(){const L=links(),u=norm(L[os]);
-      $$('.os-tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.os===os)));
-      box.style.boxShadow='inset 0 0 0 3px '+(os==='android'?'#3DDC84':'#141A2E');
-      $('#qr-badge').textContent=os==='android'?'안드로이드':'아이폰';$('#qr-badge').style.background=os==='android'?'#1F9D5A':'#141A2E';
-      $('#os-steps').innerHTML=STEPS[os].map(t=>`<li>${t}</li>`).join('');
-      if(u){box.hidden=false;empty.hidden=true;draw(u,os==='android'?'#1F9D5A':'#141A2E');urlEl.textContent=u;$('#inv-copy-link').disabled=false}
-      else{box.hidden=true;empty.hidden=false;urlEl.textContent='';$('#inv-copy-link').disabled=true;
-        empty.innerHTML=`<b>${os==='android'?'안드로이드':'아이폰'} 다운로드 주소가 아직 없어요</b><span>앱 파일을 올린 주소를 넣으면 QR이 만들어져요.</span><button class="btn small" type="button" id="qr-set">주소 넣기</button>`;
-        $('#qr-set').onclick=()=>{$('#inv-edit').open=true;$(os==='android'?'#inv-and':'#inv-ios').focus()}}}
-    function pick(o){os=o;render()}
-    /* ---- 친구초대 ---- */
-    const FKEY='ppopgi-inviter',CKEY='ppopgi-invite-count',INV=WEB+'#invite';let mode='dl';
-    const getName=()=>{try{return localStorage.getItem(FKEY)||''}catch(e){return''}};
     function message(){const n=getName().trim();
-      return `${n?`${n} 님이 `:''}[오늘의 뽑기판]에 초대했어요! 🎉\n사다리·룰렛·빙고·폭탄 돌리기 등 21가지 게임을 같이 해요.\n\n👉 아래 링크를 누르면 내 휴대폰(안드로이드·아이폰)에 맞는 앱을 받을 수 있어요.\n${INV}`}
-    function count(){let c=0;try{c=+localStorage.getItem(CKEY)||0}catch(e){}$('#fr-count').textContent=c?`지금까지 초대 메시지를 ${c}번 보냈어요`:'초대 메시지를 복사해 카톡·문자에 붙여 넣으세요';return c}
-    function renderFriend(){const fc=$('#fr-cv');const keep=cv;drawTo(fc,INV,'#EE5A28');$('#fr-url').textContent=INV;$('#fr-preview').textContent=message();count()}
-    function drawTo(canvas,u,eye){const prev=canvasRef;canvasRef=canvas;draw(u,eye);canvasRef=prev}
+      return `${n?`${n} 님이 `:''}[오늘의 뽑기판]을 추천했어요! 🎉\n사다리·룰렛·빙고·폭탄 돌리기 등 모임용 게임 21가지, 설치 없이 바로 열려요.\n\n👉 사이트 주소 (북마크해 두고 쓰세요)\n${site()}`}
+    function count(){let c=0;try{c=+localStorage.getItem(CKEY)||0}catch(e){}$('#fr-count').textContent=c?`지금까지 추천 메시지를 ${c}번 보냈어요`:'추천 메시지를 복사해 카톡·문자에 붙여 넣으세요'}
+    function render(){const u=site();
+      if(mode==='dl'){draw($('#qr-cv'),u,'#1B2C9E');$('#qr-url').textContent=u}
+      else{draw($('#fr-cv'),u,'#EE5A28');$('#fr-url').textContent=u;$('#fr-preview').textContent=message();count()}}
     function setMode(m){mode=m;$('#pane-dl').hidden=m!=='dl';$('#pane-friend').hidden=m!=='friend';
       $$('.mode-tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.mode===m)));
-      $('#inv-eyebrow').textContent=m==='dl'?'앱 다운로드':'친구초대';
-      $('#invite-title').textContent=m==='dl'?'휴대폰 카메라로 찍어서 앱을 받으세요':'친구에게 QR을 보여 주거나 메시지를 보내세요';
-      if(m==='friend')renderFriend();else render()}
-    $$('.mode-tabs button').forEach(b=>b.onclick=()=>{setMode(b.dataset.mode);fx.play('pop')});
-    $('#to-friend').onclick=()=>{setMode('friend');fx.play('pop')};
-    $('#fr-name').addEventListener('input',e=>{try{localStorage.setItem(FKEY,e.target.value)}catch(err){}$('#fr-preview').textContent=message()});
-    function bump(){let c=0;try{c=(+localStorage.getItem(CKEY)||0)+1;localStorage.setItem(CKEY,String(c))}catch(e){}count()}
-    $('#fr-copy').onclick=()=>{copyText(message());bump();fx.play('coin');if(cur)fx.react('happy','초대 메시지를 복사했어요. 단톡방에 붙여 넣어 주세요!',true)};
-    $('#fr-copy-link').onclick=()=>copyText(INV);
-    /* ---- 초대 링크로 들어온 친구에게 보여 주는 환영 화면 ---- */
-    function welcome(){const w=$('#welcome'),L=links(),isI=/iphone|ipad|ipod/i.test(navigator.userAgent),isA=/android/i.test(navigator.userAgent);
-      $('#wel-figs').innerHTML=['ppogi','dai','peng','nyang'].map(c=>`<span>${fig(c,'happy')}</span>`).join('');
-      const AND_A=`<a class="and" href="${esc(norm(L.android))}" target="_blank" rel="noopener">${$('#tab-android svg').outerHTML}안드로이드 앱 받기</a>`;
-      const IOS_A=`<a class="ios" href="#" id="wel-ios">${$('#tab-ios svg').outerHTML}아이폰에 설치하기</a>`;
-      $('#wel-btns').innerHTML=isI?IOS_A+AND_A.replace('class="and"','class="sub"'):isA?AND_A+IOS_A.replace('class="ios"','class="sub"'):AND_A+IOS_A;
-      const steps=k=>{const st=k==='ios'?STEPS.ios.slice(1):['위 초록 버튼을 눌러 <b>ppopgi.apk</b>를 내려받아요'].concat(STEPS.android.slice(1));$('#wel-steps').innerHTML=st.map(t=>`<li>${t}</li>`).join('')};
-      steps(isI?'ios':'android');
-      $('#wel-ios').onclick=e=>{e.preventDefault();steps('ios');fx.play('pop')};
-      $('#wel-btns a[href^="http"]').addEventListener('click',()=>steps('android'));
-      const close=()=>{w.hidden=true;try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}};
-      $('#wel-close').onclick=close;$('#wel-web').onclick=()=>{close();fx.celebrate&&fx.burst(80)};
-      w.addEventListener('click',e=>{if(e.target===w)close()});
-      w.hidden=false}
-    if(location.hash==='#invite')setTimeout(welcome,300);
-    function open(m){lastFocus=document.activeElement;const L=links();$('#inv-and').value=L.android;$('#inv-ios').value=L.ios;$('#fr-name').value=getName();
-      os=/iphone|ipad|ipod/i.test(navigator.userAgent)?'ios':'android';setMode(m||'dl');$('#invite-fig').innerHTML=fig('ppogi','happy');back.hidden=false;fx.chime();$('#invite-close').focus()}
+      $('#inv-eyebrow').textContent=m==='dl'?'다운로드 QR':'친구 추천';
+      $('#invite-title').textContent=m==='dl'?'카메라로 찍어서 사이트를 북마크하세요':'친구에게 QR을 보여 주거나 메시지를 보내세요';
+      render()}
+    function open(m){lastFocus=document.activeElement;$('#inv-site').value=site();$('#fr-name').value=getName();
+      $('#invite-fig').innerHTML=fig('ppogi','happy');setMode(m||'dl');back.hidden=false;fx.chime();$('#invite-close').focus()}
     function close(){back.hidden=true;if(lastFocus)lastFocus.focus()}
-    $$('.os-tabs button').forEach(b=>b.onclick=()=>{pick(b.dataset.os);fx.play('pop')});
     $('#invite-open').onclick=()=>open('dl');$('#friend-open').onclick=()=>open('friend');$('#invite-close').onclick=close;
     back.addEventListener('click',e=>{if(e.target===back)close()});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!back.hidden)close();const w=$('#welcome');if(!w.hidden)w.hidden=true}});
-    $('#inv-copy-link').onclick=()=>copyText(norm(links()[os]));
-    $('#inv-form').onsubmit=e=>{e.preventDefault();const v={android:norm($('#inv-and').value),ios:norm($('#inv-ios').value)};
-      if((v.android+v.ios).length>1200){toast('주소가 너무 길어요.');return}
-      $('#inv-and').value=v.android;$('#inv-ios').value=v.ios;try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}mode==='friend'?renderFriend():render();fx.ding();toast('다운로드 주소를 저장했어요')};
-    $('#inv-reset').onclick=()=>{try{localStorage.removeItem(KEY)}catch(e){}$('#inv-and').value=DEFAULTS.android;$('#inv-ios').value=DEFAULTS.ios;render();toast('기본 주소로 되돌렸어요')};
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!back.hidden)close()});
+    $$('.mode-tabs button').forEach(b=>b.onclick=()=>{setMode(b.dataset.mode);fx.play('pop')});
+    $('#to-friend').onclick=()=>{setMode('friend');fx.play('pop')};
+    $('#inv-copy-link').onclick=()=>copyText(site());
+    $('#fr-copy-link').onclick=()=>copyText(site());
+    $('#fr-name').addEventListener('input',e=>{try{localStorage.setItem(FKEY,e.target.value)}catch(err){}$('#fr-preview').textContent=message()});
+    $('#fr-copy').onclick=()=>{copyText(message());let c=0;try{c=(+localStorage.getItem(CKEY)||0)+1;localStorage.setItem(CKEY,String(c))}catch(e){}count();fx.play('coin');
+      if(cur)fx.react('happy','추천 메시지를 복사했어요. 단톡방에 붙여 넣어 주세요!',true)};
+    $('#inv-form').onsubmit=e=>{e.preventDefault();const v=norm($('#inv-site').value);if(!v)return;if(v.length>600){toast('주소가 너무 길어요.');return}
+      $('#inv-site').value=v;try{localStorage.setItem(KEY,v)}catch(err){}render();fx.ding();toast('사이트 주소를 저장했어요')};
+    $('#inv-reset').onclick=()=>{try{localStorage.removeItem(KEY)}catch(e){}$('#inv-site').value=SITE_DEFAULT;render();toast('기본 주소로 되돌렸어요')};
   })();
   $('#cheer').onclick=()=>{if(!fx.on)toast('효과음이 꺼져 있어요. 소리를 들으려면 효과음을 켜 주세요.');fx.celebrate('축하합니다! 오늘의 주인공!')};
   const v=$('#intro'),rb=$('#reel-btn');
